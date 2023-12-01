@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>My HTML Speedrun Learning</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <nav>
