@@ -4,15 +4,6 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <h2>Practice</h2>
-<!--                 <li><a href="#">Home</a> </li>
-                <li><a href="practice.html">Practice</a> </li>
-                <li><a href="design.html">Design</a> </li> -->
-            </ul>
-        </nav>
-
         <h3>Level 0</h3>
         <ol>
             <li>
