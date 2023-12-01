@@ -1,0 +1,43 @@
+html{
+    background-color: #fefefe;
+}
+
+body{
+    margin: 0;
+}
+
+.main-card 
+{   
+    padding: 5rem;
+    margin: 1rem;
+    margin-top: 0;
+    border: solid black 2px;
+}
+
+.sub-card 
+{   
+    padding: 5rem;
+    margin-top: 0;
+    border: solid black 2px;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: right;
+    padding: 30px;
+    padding-right: 15px;
+}
+
+li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(5,5,5);
+}
+
+.columns{
+    column-count: 3;
+    column-width: 250px;
+    margin: 3%;
+    margin-top: 10px;
+}
+
