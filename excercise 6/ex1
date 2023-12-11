@@ -1,0 +1,14 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+//ไม่รู้จะตั้งชื่อ functionว่าอะไร =w=
+int function1(string xy){           
+
+
+    return 0;
+}
+int main(){
+    cout << function1("cat");
+    return 0;
+}
