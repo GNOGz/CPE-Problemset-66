@@ -3,6 +3,7 @@ using namespace std;
 
 int main()
 {
+    // โชคดีครับ
     double userInput = 0;
     double burnTime = 0;
     double previous = 0;

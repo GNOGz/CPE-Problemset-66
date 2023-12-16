@@ -44,6 +44,10 @@ void printPattern1ButOtherApproach(int N, int M)
         return;
     }
 
+    // คำถาม ทำไมไม่ใช้ else ?
+    // คำตอบ เพราะถ้าเจอ return function จะหยุดทำงานทันที
+    // return เหมือนเป็น break สำหรับ function
+
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < M; j++)
@@ -55,6 +59,10 @@ void printPattern1ButOtherApproach(int N, int M)
         }
         cout << endl;
     }
+    // ลองสร้างตาราง i + j ดู ลองเอา 3x3 ก่อน
+    // 0 + 0 | 0 + 1 | 0 + 2        0 | 1 | 2     O | X | O
+    // 1 + 0 | 1 + 1 | 1 + 2   =>   1 | 2 | 3  => X | O | X มันคือ เลขคู่ = O, เลขคี่ = X
+    // 2 + 0 | 2 + 1 | 2 + 2        2 | 3 | 4     O | X | O
 }
 
 int main()

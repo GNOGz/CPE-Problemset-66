@@ -44,6 +44,11 @@ void printPattern2ButOtherApproach(int N)
         }
         cout << endl;
     }
+    // เหมือนข้อ 4 สร้าง แต่ตาราง i, j ดู
+    // 0, 0 | 0, 1 | 0, 2        O | X | X
+    // 1, 0 | 1, 1 | 1, 2   =>   O | O | X มันคือ ถ้า i <= j จะได้ "O" ถ้าไม่ใช่ก็ได้ "X"
+    // 2, 0 | 2, 1 | 2, 2        O | O | O
+
 }
 
 int main()
