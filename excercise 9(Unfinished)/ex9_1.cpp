@@ -7,19 +7,19 @@ int main(){
     cin >> N;
 
     for (int i = 1;i <= N;i++){
-        for(int j = 1;____;j++){
-            cout <<" ";
-            if(j < ___ ) cout <<"|";
+        for(int j = 1 ; j <= N;j++){
+            cout <<"   ";
+            if(j < N ) cout <<"|";
         }
-    }
+    
     cout << "\n";
-    ____ (i < N){
+    if(i < N){
         for(int j = 1;j<=N;j++){
-            cout << ____ ;
-            if(____ < N) cout << "+";
+            cout << "---" ;
+            if(j < N) cout << "+";
         }
-        cout __;
+        cout << '\n';
     }
-
+    }
     return 0;
 }

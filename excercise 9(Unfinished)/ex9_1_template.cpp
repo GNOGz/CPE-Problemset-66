@@ -9,10 +9,10 @@ int main(){
     
     for (int i = 1;____;i++){
         for(int j = 1;____;j++){
-            cout <<" ";
+            cout <<"   ";
             if(j < ___ ) cout <<"|";
         }
-    }
+    
     cout << "\n";
     ____ (i < N){
         for(int j = 1;j<=N;j++){
@@ -20,6 +20,7 @@ int main(){
             if(____ < N) cout << "+";
         }
         cout __;
+    }
     }
 
     return 0;
