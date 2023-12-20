@@ -5,8 +5,8 @@ int main(){
     int N;
     cout << "please input board size: " ;
     cin >> N;
-    
-    for (int i = 1;____;i++){
+
+    for (int i = 1;i <= N;i++){
         for(int j = 1;____;j++){
             cout <<" ";
             if(j < ___ ) cout <<"|";
