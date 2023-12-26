@@ -31,11 +31,11 @@ int main(){
         int samplespace = prob(n);
         int num,data;
         num = rand()%samplespace+1;
-        cout << "Please wait for the code to run...............";
+        cout << "Please wait for the code to run...............\n";
         for(int i = 1;i<= 1000000000;i++){
             num = rand()%samplespace+1;
             data = numRandom(num,0,n);
-            //cout << data << endl;
+            cout << data << endl;
             count[data-1]++;
         }
     }
