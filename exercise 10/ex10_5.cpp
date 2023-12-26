@@ -13,11 +13,11 @@ int prob(int p){
     return sum;
 }
 
-int numRandom(int num,int prob,int n){
-    if(num <= n)
-        return (numRandom(num*2,prob,n-1));
-    else 
+int numRandom(int num,int i,int n){
+    if(num <= pow(2,i))
         return n;
+    else 
+        return (numRandom(num,i+1,n-1));
 }
 
 
@@ -26,15 +26,16 @@ int main(){
     int n;
     cout << "Enter n : " ;
     cin >> n;
-    int count[n];
+    int count[n] = {0};
     if( n > 1){
         int samplespace = prob(n);
         int num,data;
         num = rand()%samplespace+1;
-        for(int i = 1;i<= 100;i++){
+        cout << "Please wait for the code to run...............";
+        for(int i = 1;i<= 1000000000;i++){
             num = rand()%samplespace+1;
-            data = numRandom(num,samplespace,n);
-            cout << data << endl;
+            data = numRandom(num,0,n);
+            //cout << data << endl;
             count[data-1]++;
         }
     }
