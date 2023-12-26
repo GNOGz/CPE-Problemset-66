@@ -12,9 +12,10 @@ int prob(int p){
     }
     return sum;
 }
-int numRandom(int i,int prob,int n){
-    if(i <= n)
-        return (numRandom(i*2,prob,n-1));
+
+int numRandom(int num,int prob,int n){
+    if(num <= n)
+        return (numRandom(num*2,prob,n-1));
     else 
         return n;
 }
@@ -25,12 +26,19 @@ int main(){
     int n;
     cout << "Enter n : " ;
     cin >> n;
+    int count[n];
     if( n > 1){
-        int probability = prob(n),num,value; 
-        num = rand()%probability+1;
-        for(int i = 1;i<= 1000000000;i++){
-            num = rand()%probability+1;
-            cout << numRandom(num,probability,n) << endl;
+        int samplespace = prob(n);
+        int num,data;
+        num = rand()%samplespace+1;
+        for(int i = 1;i<= 100;i++){
+            num = rand()%samplespace+1;
+            data = numRandom(num,samplespace,n);
+            cout << data << endl;
+            count[data-1]++;
         }
+    }
+    for (int i = 0; i < sizeof(count)/sizeof(count[0]) ; i++){
+        cout << "Number of " << i+1 <<" : " << count[i] << endl ; 
     }
 }
