@@ -14,6 +14,7 @@ int prob(int p){
 }
 
 int numRandom(int num,int i,int n){
+    if(num == 1) return 1;
     if(num <= pow(2,i))
         return n;
     else 
@@ -34,8 +35,8 @@ int main(){
         cout << "Please wait for the code to run...............\n";
         for(int i = 1;i<= 1000000000;i++){
             num = rand()%samplespace+1;
-            data = numRandom(num,0,n);
-            cout << data << endl;
+            data = numRandom(num,1,n);
+            //cout << data << endl;
             count[data-1]++;
         }
     }
