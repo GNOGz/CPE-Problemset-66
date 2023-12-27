@@ -1,17 +1,15 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
-long SumOfTwoPow(int,long &);
-long sum = 0; 
+long SumOfTwoPow(int);
 int main(){
-    cout <<"Sum of 2^1 to 2^6 = "<<SumOfTwoPow(6,sum) << endl;
+    cout <<"Sum of 2^1 to 2^6 = "<<SumOfTwoPow(6) << endl;
     return 0;
 }
 
-long SumOfTwoPow(int n,long &sum){
-    if(n >= 1){
-        sum += pow(2,n);
-        SumOfTwoPow(n-1,sum);
+long SumOfTwoPow(int n){
+    if(n == 1){
+        return 2;
     }
-    else return sum;
+    return pow(2,n)+SumOfTwoPow(n-1);
 }
