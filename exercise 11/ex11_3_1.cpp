@@ -4,7 +4,7 @@ using namespace std;
 long SumOfTwoPow(int,long &);
 long sum = 0; 
 int main(){
-    cout << SumOfTwoPow(3,sum) << endl;
+    cout <<"Sum of 2^1 to 2^6 = "<<SumOfTwoPow(6,sum) << endl;
     return 0;
 }
 
