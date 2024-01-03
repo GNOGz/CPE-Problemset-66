@@ -23,6 +23,9 @@ int main()
     return 0;
 }
 template <typename Type>
+
+//ทำไว้ 2 วิธีคล้ายๆกัน
+/*
 void insert(const Type source[], Type output[], int N ,Type value,int i_value)
 {
     for(int j = 0 ; j < N ; j++ ){
@@ -41,3 +44,22 @@ void insert(const Type source[], Type output[], int N ,Type value,int i_value)
         }
     }
 }
+*/
+
+
+void insert(const Type source[], Type output[], int N ,Type value,int i_value)
+{
+    int i = 0;
+    for(int j = 0 ; j < N ; j++ ){
+        if(j == i_value) {
+            output[j] = value;
+            output[j+1] = source[j];
+            i++;
+            }
+         else {
+            output[j+i] = source[j];
+        }
+    }
+}
+
+
