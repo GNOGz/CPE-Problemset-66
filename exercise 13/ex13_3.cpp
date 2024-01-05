@@ -35,13 +35,17 @@ void showMatrix (const double metrix[][N]){
     }
 }
 void matrixMultiply(const double A[][N], const double B[][N], double output[][N]){
-  for(int i = 0 ; i < N ; i++){
-    double sum = 0;
-    for(int j = 0 ; j < N ; j++){
-        sum += A[i][j]*B[j][i];
-        output[i][j] = sum;
+
+    for(int i = 0 ; i < N ; i++){
+        for(int j = 0 ; j < N; j++) output[i][j] = 0.0;
     }
 
+   for(int i = 0 ; i < N ; i++){
+    double sum = 0.0;
+    for(int j = 0 ; j < N ; j++){
+        sum += A[i][j]*B[j][i];
+        output[i][j] += A[i][j]*B[j][i];
+    }
 }
 
 }
