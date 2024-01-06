@@ -1,13 +1,9 @@
 #include <iostream>
 using namespace std;
-const int N = 3;
-
+const int N = 4;
 void inputMatrix(double[][N]);
-
 void matrixMultiply(const double[][N], const double[][N], double[][N]);
-
 void showMatrix(const double[][N]);
-
 int main()
 {
     double A[N][N], B[N][N], C[N][N];
@@ -20,32 +16,42 @@ int main()
     showMatrix(C);
     return 0;
 }
-void inputMatrix(double metrix[][N]){
-    for(int i = 0 ; i < N ; i++){
-        cout << "Row " << i+1 << ": "; 
-        for(int j = 0 ; j < N ; j++){
-            cin >> metrix[i][j];
+
+void inputMatrix(double matrix[][N])
+{
+    for (int i = 0; i < N; i++)
+    {
+        cout << "Row " << i + 1 << ": ";
+        for (int j = 0; j < N; j++)
+        {
+            cin >> matrix[i][j];
         }
     }
 }
-void showMatrix (const double metrix[][N]){
-    for(int i = 0 ; i < N ;i++){
-        for(int j = 0 ; j < N ; j++) cout << metrix[i][j] <<  " " ;
+
+void showMatrix(const double matrix[][N])
+{
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cout << matrix[i][j] << " ";
+        }
         cout << endl;
     }
 }
-void matrixMultiply(const double A[][N], const double B[][N], double output[][N]){
 
-    for(int i = 0 ; i < N ; i++){
-        for(int j = 0 ; j < N; j++) output[i][j] = 0.0;
+void matrixMultiply(const double matrixA[][N], const double matrixB[][N], double resultMatrix[][N])
+{
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            resultMatrix[i][j] = 0;
+            for (int k = 0; k < N; k++)
+            {
+                resultMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
+            }
+        }
     }
-
-   for(int i = 0 ; i < N ; i++){
-    double sum = 0.0;
-    for(int j = 0 ; j < N ; j++){
-        sum += A[i][j]*B[j][i];
-        output[i][j] += A[i][j]*B[j][i];
-    }
-}
-
 }
