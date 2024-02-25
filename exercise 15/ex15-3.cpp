@@ -20,4 +20,5 @@ int main(){
         }
         cout << "\n";
     }
+    delete [] V;
 }
