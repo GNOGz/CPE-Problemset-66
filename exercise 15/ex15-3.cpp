@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
     int N, M;
-    cin >> N >> M;
+    cin >> M >> N;
     int* V = new int[N + M -1];
     V[0] = 1;
     for(int i = 1; i < M + N - 1; i++){
