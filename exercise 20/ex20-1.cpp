@@ -18,9 +18,9 @@ public:
 
 Monster operator+(Monster a, Monster b)
 {
-    int health = a.hp == b.hp ? a.hp : min(a.hp, b.hp) + rand() % (max(a.hp, b.hp) - min(a.hp, b.hp));
-    int attack = a.atk == b.atk ? a.atk : min(a.atk, b.atk) + rand() % (max(a.atk, b.atk) - min(a.atk, b.atk));
-    int defense = a.def == b.def ? a.def : min(a.def, b.def) + rand() % (max(a.def, b.def) - min(a.def, b.def));
+    int health = a.hp == b.hp ? a.hp : min(a.hp, b.hp) + rand() % (max(a.hp, b.hp) - min(a.hp, b.hp) + 1);
+    int attack = a.atk == b.atk ? a.atk : min(a.atk, b.atk) + rand() % (max(a.atk, b.atk) - min(a.atk, b.atk) + 1);
+    int defense = a.def == b.def ? a.def : min(a.def, b.def) + rand() % (max(a.def, b.def) - min(a.def, b.def) + 1);
     set<string> skillsList;
     vector<string> skills;
     for (int i = 0; i < a.skills.size(); i++)
